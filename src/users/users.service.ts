@@ -27,6 +27,11 @@ export class UsersService {
       return user;
    }
 
+   async getLastUser() {
+      const user = await this.userRepository.max('id')
+      return user;
+   }
+
    async getAllUsers() {
       const users = await this.userRepository.findAll();
       return users;

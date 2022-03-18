@@ -30,15 +30,21 @@ export class UsersController {
       // return of(res.sendFile(imagename))
    }
 
-
    @Post('create')
    create(@Body() userDto: CreateUserDto) {
       return this.usersService.createUser(userDto);
    }
+
    @Post('/user')
    getUser(@Body() userFindDto: FindUserDto) {
       return this.usersService.getUser(userFindDto);
    }
+
+   @Get('/last-user')
+   getLastUser() {
+      return this.usersService.getLastUser();
+   }
+
    @Get('/users')
    getAllUsers() {
       return this.usersService.getAllUsers();
