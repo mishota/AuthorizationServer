@@ -22,8 +22,8 @@ export const saveImageToStorage = {
          cb(null, fileName);
       }
    }),
-   fileFilter: (req, file, cb) => {
-      const allowedMimeTypes: validMimeType[] = validMimeTypes;
-      allowedMimeTypes.includes(file.mimeType) ? cb(null, true) : cb(null, false)
-   }
+   // fileFilter: (req, file, cb) => {
+   //    const allowedMimeTypes: validMimeType[] = validMimeTypes;
+   //    allowedMimeTypes.includes(file.mimeType) ? cb(null, true) : cb(null, false)
+   // }
 }
